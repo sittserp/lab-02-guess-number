@@ -22,13 +22,14 @@ button.addEventListener('click', () => {
             message.textContent = `Congratulations! ${correctNumber} is the right number!  Edit and click Submit to guess a new number! `;
             correctNumber = Math.floor(Math.random() * 20 + 1);
             console.log(correctNumber);
-        }
+            }
         if (evaluation === 1) {
             message.textContent = `${guess} is too high.`;
-        }
+            }
         if (evaluation === -1) {
             message.textContent = `${guess} is too low.`;
-        }
+            }
+        
         numberOfTries--;
 
     if (numberOfTries === 1) {
@@ -40,12 +41,12 @@ button.addEventListener('click', () => {
         }
     if (numberOfTries === 0) {
         message.textContent = `Sorry, you\'re all out of tries. ${correctNumber} was the correct number. Click Submit to try again!`
-    }
+        }
     if (numberOfTries === -1) {
         message.textContent = '';
         counter.textContent = 'You have 4 tries left.';
         numberOfTries = 4;
         correctNumber = Math.floor(Math.random() * 20 + 1);
         console.log(correctNumber);
-    }
+        }
 });
